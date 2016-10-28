@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'timer',
   template: `
-        <h1>{{minutes}}:{{seconds}}</h1>
+        <h1>{{minutes}}:{{seconds | number : '2.0'}}</h1>
         <p>
-            <button (click)="togglePaused()">
+            <button (click)="togglePaused()"
+                class="btn btn-danger">
                 {{ buttonLabel }}
             </button>
         </p>
